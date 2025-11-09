@@ -13,15 +13,16 @@ export type Publication = {
 };
 
 type Props = {
+  title: string;
   items: Publication[];
 };
 
-export default function Publications({ items }: Props) {
+export default function Publications({ title, items }: Props) {
   if (!items || items.length === 0) return null;
 
   return (
     <section className="publications">
-      <h2 className="publications-title">Publications</h2>
+      <h2 className="publications-title">{title}</h2>
       <div className="publications-list">
         {items.map((p, i) => (
           <article key={p.id ?? i} className="publication">

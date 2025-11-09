@@ -46,3 +46,14 @@
   text-decoration: none;
 }
 .pub-link:hover { text-decoration: underline; }
+
+/* Make BibTeX/code blocks wrap instead of causing horizontal overflow */
+.bibtex {
+  white-space: pre-wrap; /* allow lines to wrap */
+  word-break: break-word; /* break long words/URLs */
+  overflow-wrap: anywhere; /* break long strings if needed */
+}
+
+.bibtex code {
+  display: block;
+}
