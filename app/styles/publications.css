@@ -1,0 +1,48 @@
+.publications {
+  margin-top: 1.5rem;
+}
+.publications-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.publication {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+.publication-image img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+.publication-body {
+  flex: 1;
+}
+.publication-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.publication-authors {
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+.publication-venue {
+  color: #666;
+  font-size: 0.95rem;
+}
+.publication-links {
+  margin-top: 0.5rem;
+}
+.pub-link {
+  margin-right: 0.5rem;
+  color: #0b6efd;
+  text-decoration: none;
+}
+.pub-link:hover { text-decoration: underline; }
