@@ -1,7 +1,7 @@
 {
   "name": "website",
   "private": true,
-  "homepage": "https://dc-wong.github.io/",
+  "homepage": "https://dc-wong.github.io/dc-wong.github.io",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
