@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/dc-wong/dc-wong.github.io/issues"
   },
-  "homepage": "https://github.com/dc-wong/dc-wong.github.io#readme",
+  "homepage": "https://github.com/dc-wong/dc-wong.github.io",
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
