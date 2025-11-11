@@ -82,7 +82,7 @@ export default function GazeVal() {
         <div className="container is-max-desktop">
           <div className="hero-body">
             <div className="image-container">
-              <img className="img-responsive" src="/assets/gazeval/framework.png" alt="Teaser Image" />
+              <img className="img-responsive" src="./assets/gazeval/framework.png" alt="Teaser Image" />
             </div>
             <h2 className="subtitle has-text-centered">
               Overview of the proposed GazeVal framework, which introduces two tasks with corresponding evaluation metrics to quantitatively assess the quality of synthetic Chest X-ray images with expert knowledge.
@@ -118,7 +118,7 @@ export default function GazeVal() {
                 </p>
               </div>
               <div className="image-container">
-                <img className="img-responsive" src="/assets/gazeval/setup.png" alt="one click" />
+                <img className="img-responsive" src="./assets/gazeval/setup.png" alt="one click" />
               </div>
               <br />
               <div className="subtitle has-text-justified">
@@ -145,7 +145,7 @@ export default function GazeVal() {
                 </p>
               </div>
               <div className="image-container">
-                <img className="img-responsive" src="/assets/gazeval/Box_Whisker2.png" alt="one click" />
+                <img className="img-responsive" src="./assets/gazeval/Box_Whisker2.png" alt="one click" />
               </div>
               <br />
               <div className="subtitle has-text-justified">
@@ -154,7 +154,7 @@ export default function GazeVal() {
                 </p>
               </div>
               <div className="image-container">
-                <img className="img-responsive" src="/assets/gazeval/table.png" alt="one click" />
+                <img className="img-responsive" src="./assets/gazeval/table.png" alt="one click" />
               </div>
             </div>
           </div>
@@ -171,11 +171,11 @@ export default function GazeVal() {
                 </p>
               </div>
               <div className="image-container">
-                <img className="img-responsive" src="/assets/gazeval/Table2.png" style={{ maxWidth: "100%", height: "auto" }} alt="one click" />
+                <img className="img-responsive" src="./assets/gazeval/Table2.png" style={{ maxWidth: "100%", height: "auto" }} alt="one click" />
               </div>
               <br />
               <div className="image-container">
-                <img className="img-responsive" src="/assets/gazeval/IoUFigure3.png" style={{ maxWidth: "100%", height: "auto" }} alt="one click" />
+                <img className="img-responsive" src="./assets/gazeval/IoUFigure3.png" style={{ maxWidth: "100%", height: "auto" }} alt="one click" />
               </div>
               <br />
               <div className="subtitle has-text-justified">
@@ -184,7 +184,7 @@ export default function GazeVal() {
                 </p>
               </div>
               <div className="image-container">
-                <img className="img-responsive" src="/assets/gazeval/pathology.png" alt="one click" />
+                <img className="img-responsive" src="./assets/gazeval/pathology.png" alt="one click" />
               </div>
             </div>
           </div>

@@ -14,11 +14,11 @@ import Publications from "../components/Publications";
 
 export default function Home() {
   const selfImages = [
-    "/assets/self/img_1.jpg",
-    "/assets/self/img_2.jpg",
-    "/assets/self/img_3.jpeg",
-    "/assets/self/img_4.jpg",
-    "/assets/self/img_5.jpg",
+    "./assets/self/img_1.jpg",
+    "./assets/self/img_2.jpg",
+    "./assets/self/img_3.jpeg",
+    "./assets/self/img_4.jpg",
+    "./assets/self/img_5.jpg",
   ];
 
   const publications = [
@@ -31,7 +31,7 @@ export default function Home() {
       links: [
         { label: "Paper", href: "https://arxiv.org/pdf/2504.15007" },
       ],
-      image: "/assets/projects/etralogo.png",
+      image: "./assets/projects/etralogo.png",
     },
     {
       id: 2,
@@ -41,9 +41,9 @@ export default function Home() {
       year: 2025,
         links: [
         { label: "Paper", href: "https://arxiv.org/pdf/2503.20967" },
-        { label: "Project Page", href: "/gazeval" },
+        { label: "Project Page", href: "./gazeval" },
       ],
-      image: "/assets/projects/gazevallogo.png",
+      image: "./assets/projects/gazevallogo.png",
     },
   ];
 
@@ -57,7 +57,7 @@ export default function Home() {
       links: [
         { label: "Competition Page", href: "https://sanofi-challenge.web.app/" },
       ],
-      image: "/assets/projects/sanofi_logo.jpeg",
+      image: "./assets/projects/sanofi_logo.jpeg",
     },
     {
       id: 2,
@@ -68,7 +68,7 @@ export default function Home() {
       links: [
         { label: "Project Page", href: "https://numedicalmakers.org/project1.html" },
       ],
-      image: "/assets/projects/milo_arm.png",
+      image: "./assets/projects/milo_arm.png",
     },
   ];
 
@@ -87,7 +87,7 @@ export default function Home() {
               <a href="https://scholar.google.com/citations?user=PFAy4YkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> /
               <a href="https://github.com/dc-wong" target="_blank" rel="noopener noreferrer"> Github</a> /
               <a href="https://www.linkedin.com/in/david-c-w-nu2027/" target="_blank" rel="noopener noreferrer"> LinkedIn</a> /
-              <a href="/assets/docs/David_Wong_Resume.pdf" target="_blank" rel="noopener noreferrer"> Resume</a>
+              <a href="./assets/docs/David_Wong_Resume.pdf" target="_blank" rel="noopener noreferrer"> Resume</a>
             </div>
           </div>
         </div>
