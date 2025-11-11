@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = (env, argv) => {
   const isDev = argv.mode === 'development';
 
@@ -77,6 +80,18 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'public', 'index.html'),
       }),
+      // Copies everything else from /public to /dist (favicons, images, robots.txt, etc.)
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, 'public'),
+            to: path.resolve(__dirname, 'dist'),
+            // don’t overwrite the generated HTML files
+            filter: (resourcePath) => !/index\.html$/i.test(resourcePath)
+          }
+        ]
+      }),
+      new ForkTsCheckerWebpackPlugin(),   // type-checking in separate process
       !isDev && new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
       }),
