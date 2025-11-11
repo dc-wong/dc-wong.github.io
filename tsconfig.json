@@ -1,27 +1,17 @@
 {
-  "include": [
-    "**/*",
-    "**/.server/**/*",
-    "**/.client/**/*",
-    ".react-router/types/**/*"
-  ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["node", "vite/client"],
-    "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "rootDirs": [".", "./.react-router/types"],
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./app/*"]
-    },
+    "target": "es5",                       // older browsers compatibility
+    "module": "esnext",                   // let Webpack handle bundling
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",                   // for React 17+ JSX transform
+    "strict": true,
     "esModuleInterop": true,
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true
-  }
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "noEmit": false                        // let Webpack emit
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
