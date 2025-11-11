@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isDev = argv.mode === 'development';
@@ -69,6 +71,9 @@ module.exports = (env, argv) => {
         {
           test: /\.(png|jpg|jpeg|gif|svg)$/i,
           type: 'asset/resource',
+          generator: {
+            filename: 'assets/[name][hash][ext][query]'  // ensures consistent folder for images
+          }
         }
       ],
     },
@@ -81,8 +86,22 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({ template: 'public/index.html', filename: 'index.html' }),
       new HtmlWebpackPlugin({ template: 'public/index.html', filename: '404.html' }),
 
+      new ForkTsCheckerWebpackPlugin(), // type-checking in separate process to speed up
+
       !isDev && new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
+      }),
+
+      // Copies everything else from /public to /dist (favicons, images, robots.txt, etc.)
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, 'public'),
+            to: path.resolve(__dirname, 'dist'),
+            // don’t overwrite the generated HTML files
+            filter: (resourcePath) => !/index\.html$/i.test(resourcePath)
+          }
+        ]
       }),
     ].filter(Boolean),
     optimization: {
