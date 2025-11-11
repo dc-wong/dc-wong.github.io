@@ -4,8 +4,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Gazeval from "./routes/gazeval";
 import Home from "./routes/home";
 
-import "./app.css";
-
 // function Home() {
 //   return <h2>Home</h2>;
 // }
