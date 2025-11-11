@@ -74,9 +74,13 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'public', 'index.html'),
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: path.resolve(__dirname, 'public', 'index.html'),
+      // }),
+      // webpack.config.js plugins
+      new HtmlWebpackPlugin({ template: 'public/index.html', filename: 'index.html' }),
+      new HtmlWebpackPlugin({ template: 'public/index.html', filename: '404.html' }),
+
       !isDev && new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
       }),

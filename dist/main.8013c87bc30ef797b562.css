@@ -237,6 +237,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -267,8 +270,14 @@
   .block {
     display: block;
   }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .inline-block {
     display: inline-block;
@@ -279,6 +288,10 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
 }
 @layer components {
@@ -615,6 +628,11 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -628,6 +646,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-outline-style: solid;
       --tw-font-weight: initial;
     }
   }
@@ -635,4 +654,4 @@
 
 
 
-/*# sourceMappingURL=main.434103216134dfdc6c1d.css.map*/
+/*# sourceMappingURL=main.8013c87bc30ef797b562.css.map*/
