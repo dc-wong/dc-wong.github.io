@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: isDev ? '[name].js' : '[name].[contenthash].js',
-      publicPath: '/dc-wong.github.io/',                      // important for React Router
+      publicPath: './',                      // important for React Router
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
